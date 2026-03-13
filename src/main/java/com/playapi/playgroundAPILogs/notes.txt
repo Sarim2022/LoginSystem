@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/auth/login
+POST http://localhost:8080/api/auth/signup
+
+{
+  "email":"admin@test.com",
+  "password":"123456"
+}
+
+./mvnw spring-boot:run
+run lsof -i :8080
+kill 54448
