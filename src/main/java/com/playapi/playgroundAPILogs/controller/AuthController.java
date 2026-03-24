@@ -27,7 +27,7 @@ public class AuthController {
         public AuthController(AuthService authService){
             this.authService = authService;
         }
-
+           /// login api
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody(required = false) LoginRequest request) {
         String emptyStateMessage = authService.CheckEmptyState(request);
