@@ -54,7 +54,7 @@ public class AuthController {
                     .body(new SignupResponse(400, "Invalid request", null));
         }
 
-        String registrationMessage = authService.UserRegistractionProcess(request);
+        String registrationMessage = authService.UserRegistractionProcess(request); //GOOD
         boolean success = "User registered successfully".equals(registrationMessage);
         HttpStatus status = success ? HttpStatus.OK : HttpStatus.BAD_REQUEST;
 
