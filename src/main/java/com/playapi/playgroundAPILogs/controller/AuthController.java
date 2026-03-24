@@ -46,7 +46,7 @@ public class AuthController {
                          .body(new LoginResponse(401, "Invalid username or password", email, LocalDateTime.now()));
     }
 
-
+         // signup
     @PostMapping("/signup")
     public ResponseEntity<SignupResponse> signup(@RequestBody(required = false) SignupRequest request) {
         if (request == null) {
